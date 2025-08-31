@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>spanish</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>spanish</h1>
+    <nav>
+      <button id="tabFlashBtn" class="tab-btn active">Flashcards</button>
+      <button id="tabGlossBtn" class="tab-btn">Glossary</button>
+      <button id="btnSettings" aria-label="Settings">⚙️</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Flashcards -->
+    <section id="flashTab" class="tab active">
+      <div class="card box">
+        <div id="fcWord" class="big"></div>
+        <div id="fcIpa" class="small"></div>
+        <div id="fcMeaning" class="reveal small"></div>
+        <div class="row">
+          <button id="btnSpeak" class="box">Speak</button>
+          <button id="btnFlip" class="box">Flip</button>
+          <button id="btnNext" class="box">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Glossary -->
+    <section id="glossTab" class="tab">
+      <div class="row stick">
+        <button class="jump box" data-jump="Basics">Basics</button>
+        <button class="jump box" data-jump="People">People</button>
+        <button class="jump box" data-jump="Places">Places</button>
+        <button class="jump box" data-jump="Things">Things</button>
+        <button class="jump box" data-jump="Adjectives">Adjectives</button>
+        <button class="jump box" data-jump="Verbs">Verbs</button>
+      </div>
+      <div id="glossaryRoot"></div>
+    </section>
+  </main>
+
+  <!-- Settings Modal -->
+  <dialog id="settingsModal">
+    <form method="dialog" class="box">
+      <h2>Settings</h2>
+      <div id="catBoxes" class="checks"></div>
+      <div class="row">
+        <button id="btnSelectAll" type="button" class="box">Select All</button>
+        <button id="btnReset" type="button" class="box">Reset</button>
+        <button id="btnCloseSettings" class="box">Close</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="spanish_full_vocab.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
